@@ -1,5 +1,3 @@
-#include <stdarg.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -53,7 +51,7 @@ void print_fun(const char *str, va_list args)
 			if (*str == '%')
 				state = 1;
 			else
-				putchar(*str);
+				_putchar(*str);
 		}
 		else if (state == 1)
 		{
@@ -63,7 +61,7 @@ void print_fun(const char *str, va_list args)
 				{
 					char *ch = va_arg(args, char *);
 
-					putchar(*ch);
+					_putchar(*ch);
 					break;
 				}
 			case 's':
@@ -72,7 +70,7 @@ void print_fun(const char *str, va_list args)
 
 					while (*m)
 					{
-						putchar(*m);
+						_putchar(*m);
 						m++;
 					}
 
