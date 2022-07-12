@@ -19,5 +19,8 @@ int print_specifier(char str, va_list args);
 
 int print_char(va_list args);
 int print_string(va_list args);
+int print_integer(va_list args);
+int print_decimal(va_list args);
 
+void int_recursion(int value);
 #endif

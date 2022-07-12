@@ -47,7 +47,7 @@ int print_fun(const char *str, va_list args)
  */
 int is_specifier_valid(char specif)
 {
-	char spec[] = {'c', 's'};
+	char spec[] = {'c', 's', 'd', 'i'};
 	int i = 0;
 
 	while (spec[i])
@@ -88,6 +88,8 @@ int print_specifier(char str, va_list args)
 	int len = 0;
 	spec spec_type[] = {{"c", print_char},
 		{"s", print_string},
+		{"d", print_decimal},
+		{"i", print_decimal},
 		{NULL, NULL}
 	};
 
