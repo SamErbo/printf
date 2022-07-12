@@ -28,10 +28,12 @@ int print_fun(const char *str, va_list args)
 				i++;
 			if (str[i] == '%')
 				count += _putchar(str[i]);
-			if (is_specifier_valid(str[i]) == 0)
-				count = print_invalid_specifier(str[i - 1], str[i], count);
 			else
-				count += print_specifier(str[i], args);
+				if (is_specifier_valid(str[i]) == 0)
+					count = print_invalid_specifier(str[i - 1], str[i], count);
+			else
+				if (is_specifier_valid(str[i]) == 1)
+					count += print_specifier(str[i], args);
 		}
 		i++;
 	}
