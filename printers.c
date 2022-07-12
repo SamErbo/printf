@@ -36,9 +36,10 @@ int print_string(va_list args)
 	{
 		_putchar('(');
 		_putchar('n');
-		_putchar('i');
+		_putchar('u');
+		_putchar('l');
 		_putchar('l');
 		_putchar(')');
-		return (5);
+		return (6);
 	}
 }
