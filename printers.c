@@ -75,14 +75,14 @@ int print_decimal(va_list args)
 		arg /= 10;
 		count++;
 	}
-	
+
 	int_recursion(temp);
 
 	return (count);
 }
 
 /**
- * int_recursion - prints out integer 
+ * int_recursion - prints out integer
  * @value: integer
  *
  * Return: nothing
@@ -93,9 +93,8 @@ void int_recursion(int value)
 
 	a = value;
 
-	if (a != 0)
-	{
+	if (a / 10)
 		int_recursion(a / 10);
-		_putchar((a % 10) + '0');
+	_putchar((a % 10) + '0');
 	}
 }
