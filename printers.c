@@ -57,11 +57,6 @@ int print_decimal(va_list args)
 
 	temp = arg;
 
-	if (temp == 0)
-	{
-		_putchar(0 + '0');
-		count++;
-	}
 	if (temp < 0)
 	{
 		_putchar('-');
@@ -96,5 +91,4 @@ void int_recursion(int value)
 	if (a / 10)
 		int_recursion(a / 10);
 	_putchar((a % 10) + '0');
-	}
 }
