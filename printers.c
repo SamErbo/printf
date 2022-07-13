@@ -75,14 +75,14 @@ int print_decimal(va_list args)
 		arg /= 10;
 		count++;
 	}
-	
+
 	int_recursion(temp);
 
 	return (count);
 }
 
 /**
- * int_recursion - prints out integer 
+ * int_recursion - prints out integer
  * @value: integer
  *
  * Return: nothing
